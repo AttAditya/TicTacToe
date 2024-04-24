@@ -1,5 +1,13 @@
 package com.attaditya.tictactoe.models;
 
 public class Symbol {
-    public Character character;
+    private final Character character;
+
+    public Symbol(Character character) {
+        this.character = character;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
 }
