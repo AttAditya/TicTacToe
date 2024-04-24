@@ -31,9 +31,19 @@ public class Board {
     }
 
     public void print() {
-        for (List<Cell> row : board) {
+        System.out.println();
+
+        System.out.println("        Col Col Col ");
+        System.out.println("         1   2   3  ");
+
+        for (int i = 0; i < size; i++) {
+            List<Cell> row = board.get(i);
+
+            System.out.println("       +---+---+---+");
+            System.out.print(" Row " + (i + 1) + " |");
+
             for (Cell cell : row) {
-                System.out.print("| ");
+                System.out.print(" ");
 
                 if (cell.getCellFillType() == CellFillType.EMPTY) {
                     System.out.print(" ");
@@ -46,5 +56,8 @@ public class Board {
 
             System.out.println();
         }
+
+        System.out.println("       +---+---+---+");
+        System.out.println();
     }
 }

@@ -33,11 +33,11 @@ public class Player {
     }
 
     public Move makeMove(Board board) {
-        System.out.print("Enter row number(0-based): ");
-        int row = scanner.nextInt();
+        System.out.print("Enter row number: ");
+        int row = scanner.nextInt() - 1;
 
-        System.out.print("Enter column number(0-based): ");
-        int col = scanner.nextInt();
+        System.out.print("Enter column number: ");
+        int col = scanner.nextInt() - 1;
 
         return new Move(new Cell(row, col), this);
     }
